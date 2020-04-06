@@ -13,6 +13,7 @@ import {
   DraggableCircle,
   FastDraggableCircle,
 } from './components/Circle'
+import { Rectangle } from './components/Rectangle'
 import { Polygon } from './components/Polygon'
 import { Text } from './components/Text'
 
@@ -38,6 +39,7 @@ const App: React.FC = () => {
   const [circle1Pos, setCircle1Pos] = useState<Coord>([-0.3333, 0.3333])
   const [circle2Pos, setCircle2Pos] = useState<Coord>([0.2, -0.5])
   const [circle3Pos, setCircle3Pos] = useState<Coord>([-0.5, -0.3001])
+  const [rectPos] = useState<Coord>([-0.7, 0.7])
 
   return (
     <div>
@@ -79,6 +81,7 @@ const App: React.FC = () => {
               r={20}
             />
           </Liner>
+          <Rectangle pos={rectPos} width="100" height="125" />
         </Liner>
       </Foundation>
     </div>
