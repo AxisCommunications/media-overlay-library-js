@@ -15,6 +15,7 @@ import {
 } from './components/Circle'
 import { Polygon } from './components/Polygon'
 import { Text } from './components/Text'
+import { Ellipse } from './components/Ellipse'
 
 const USER_BASIS: Area = [
   [-1, 1], // top left coordinate
@@ -38,6 +39,7 @@ const App: React.FC = () => {
   const [circle1Pos, setCircle1Pos] = useState<Coord>([-0.3333, 0.3333])
   const [circle2Pos, setCircle2Pos] = useState<Coord>([0.2, -0.5])
   const [circle3Pos, setCircle3Pos] = useState<Coord>([-0.5, -0.3001])
+  const [ellipsePos] = useState<Coord>([-0.8, 0.2])
 
   return (
     <div>
@@ -79,6 +81,7 @@ const App: React.FC = () => {
               r={20}
             />
           </Liner>
+          <Ellipse pos={ellipsePos} rx={40} ry={60} />
         </Liner>
       </Foundation>
     </div>
