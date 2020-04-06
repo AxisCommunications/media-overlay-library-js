@@ -36,7 +36,7 @@ const App: React.FC = () => {
     [0.7, 0.5],
     [0.3, 0.2],
   ])
-  const [circle1Pos, setCircle1Pos] = useState<Coord>([-0.3333, 0.3333])
+  const [circle1Pos] = useState<Coord>([-0.3333, 0.3333])
   const [circle2Pos, setCircle2Pos] = useState<Coord>([0.2, -0.5])
   const [circle3Pos, setCircle3Pos] = useState<Coord>([-0.5, -0.3001])
   const [ellipsePos] = useState<Coord>([-0.8, 0.2])
@@ -66,7 +66,7 @@ const App: React.FC = () => {
             I can be dragged but I am limited to the visible area
           </Text>
           <Polygon pos={polygonPos} onChangePos={setPolygonPos} />
-          <Circle pos={circle1Pos} onChangePos={setCircle1Pos} r={5} />
+          <Circle pos={circle1Pos} r={5} />
           <DraggableCircle
             pos={circle2Pos}
             onChangePos={setCircle2Pos}
