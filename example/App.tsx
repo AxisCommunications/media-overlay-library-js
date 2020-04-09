@@ -42,7 +42,7 @@ const App: React.FC = () => {
   const [ellipsePos] = useState<Coord>([-0.8, 0.2])
 
   return (
-    <div>
+    <div className="main">
       <header>
         <h1>Welcome to media-overlay-library</h1>
       </header>
