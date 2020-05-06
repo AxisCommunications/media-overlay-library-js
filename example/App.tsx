@@ -12,6 +12,7 @@ import {
   Circle,
   DraggableCircle,
   FastDraggableCircle,
+  FastDraggableCircle2,
 } from './components/Circle'
 import { Polygon } from './components/Polygon'
 import { Text } from './components/Text'
@@ -35,9 +36,10 @@ const App: React.FC = () => {
     [0.7, 0.5],
     [0.3, 0.2],
   ])
-  const [circle1Pos] = useState<Coord>([-0.3333, 0.3333])
-  const [circle2Pos, setCircle2Pos] = useState<Coord>([0.2, -0.5])
-  const [circle3Pos, setCircle3Pos] = useState<Coord>([-0.5, -0.3001])
+  const [circle1Pos] = useState<Coord>([-0.75, 0.75])
+  const [circle2Pos, setCircle2Pos] = useState<Coord>([-0.5, 0.5])
+  const [circle3Pos, setCircle3Pos] = useState<Coord>([-0.33, +0.33])
+  const [circle4Pos, setCircle4Pos] = useState<Coord>([+0.33, -0.33])
 
   return (
     <div className="main">
@@ -72,10 +74,30 @@ const App: React.FC = () => {
           />
 
           <Liner area={MIDDLE_AREA}>
+            <Text
+              x={circle3Pos[0]}
+              y={circle3Pos[1]}
+              onChangePos={setCircle3Pos}
+            >
+              I'm fast
+            </Text>
             <FastDraggableCircle
               id={'5'}
               pos={circle3Pos}
               onChangePos={setCircle3Pos}
+              r={20}
+            />
+            <Text
+              x={circle4Pos[0]}
+              y={circle4Pos[1]}
+              onChangePos={setCircle4Pos}
+            >
+              I'm even faster?
+            </Text>
+            <FastDraggableCircle2
+              id={'5'}
+              pos={circle4Pos}
+              onChangePos={setCircle4Pos}
               r={20}
             />
           </Liner>

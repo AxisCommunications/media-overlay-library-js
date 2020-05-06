@@ -169,3 +169,59 @@ export const FastDraggableCircle: React.FC<DraggableCircleProps> = ({
     />
   )
 }
+
+/*
+ * Optimized variant of DraggableCircle - Using transform
+ *
+ * In this example, the function that is subscribing to
+ * the draggable events is re-rendering the circle in the DOM
+ * directly, by applying a `transform` style.
+ */
+
+export const FastDraggableCircle2: React.FC<DraggableCircleProps> = ({
+  pos,
+  onChangePos,
+  ...circleProps
+}) => {
+  const { toSvgBasis, toUserBasis } = useContext(FoundationContext)
+  const { clampCoord } = useContext(LinerContext)
+
+  const { subscribe, unsubscribe, start: startDragging } = useDraggable()
+  const circleRef = useRef<SVGCircleElement>(null)
+
+  useEffect(() => {
+    const circleEl = circleRef.current
+    if (circleEl !== null) {
+      const [x0, y0] = toSvgBasis(pos)
+      const updatePosition: DraggableHandler = (
+        { vector: [tx, ty] },
+        ended,
+      ) => {
+        const [xT, yT] = clampCoord([x0 + tx, y0 + ty])
+        // circleEl.style.transform = `translate(${xT - x0} ${yT - y0})`
+        circleEl.setAttribute('transform', `translate(${xT - x0} ${yT - y0})`)
+        if (ended) {
+          onChangePos(toUserBasis([xT, yT]))
+        }
+      }
+      subscribe(updatePosition)
+      return () => {
+        unsubscribe()
+        circleEl.removeAttribute('transform')
+      }
+    }
+  }, [pos])
+
+  const [cx, cy] = toSvgBasis(pos)
+
+  return (
+    <SvgCircle
+      ref={circleRef}
+      name={'circle'}
+      cx={cx}
+      cy={cy}
+      onPointerDown={startDragging}
+      {...circleProps}
+    />
+  )
+}
