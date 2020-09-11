@@ -1,3 +1,12 @@
+## 3.1.3 (2020-09-11)
+
+
+### Bug Fixes
+
+* run yarn after setting git config ([a168c32](https://github.com/AxisCommunications/media-overlay-library-js/commit/a168c32e235b34be0dd0bb0bbebde97331601570))
+
+
+
 ## [3.1.2](https://github.com/AxisCommunications/media-overlay-library-js/compare/v3.1.1...v3.1.2) (2020-09-11)
 
 
