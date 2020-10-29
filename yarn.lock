@@ -3904,12 +3904,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:4.1.2":
-  version: 4.1.2
-  resolution: "eslint-plugin-react-hooks@npm:4.1.2"
+"eslint-plugin-react-hooks@npm:4.2.0":
+  version: 4.2.0
+  resolution: "eslint-plugin-react-hooks@npm:4.2.0"
   peerDependencies:
     eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
-  checksum: 252496dbaaafa6812fbd3aeaafac1192a1e35238172d8271eb370025b43604e10f04cecec3583da395358a3e6be3ace6958ec938102fe3c1b77caf30f1393c91
+  checksum: 5378d16b5a56431a7a77b56d61464dbbfa343e8607da87b851a6caee44b96e08847147321f5f38de30d20668418691d859f69d9c5262dfb5308856382252096c
   languageName: node
   linkType: hard
 
@@ -6110,13 +6110,13 @@ fsevents@^1.2.7:
     eslint-plugin-import: 2.22.0
     eslint-plugin-node: 11.1.0
     eslint-plugin-react: 7.20.5
-    eslint-plugin-react-hooks: 4.1.2
+    eslint-plugin-react-hooks: 4.2.0
     file-loader: 6.1.0
     html-webpack-plugin: 4.4.1
     pepjs: 0.5.2
     prettier: 2.1.1
-    react: 16.13.1
-    react-dom: 16.13.1
+    react: 16.14.0
+    react-dom: 16.14.0
     react-is: 16.13.1
     style-loader: 1.2.1
     styled-components: 5.1.1
@@ -7529,17 +7529,17 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-dom@npm:16.13.1":
-  version: 16.13.1
-  resolution: "react-dom@npm:16.13.1"
+"react-dom@npm:16.14.0":
+  version: 16.14.0
+  resolution: "react-dom@npm:16.14.0"
   dependencies:
     loose-envify: ^1.1.0
     object-assign: ^4.1.1
     prop-types: ^15.6.2
     scheduler: ^0.19.1
   peerDependencies:
-    react: ^16.13.1
-  checksum: fb5c3ad41360c6a8674f33916aa895d05e79d063d31a6963074220c1cda9e07e880799d01670b4ebd570b4d3457584f13cc898b5033a05641e8e801f5611607e
+    react: ^16.14.0
+  checksum: a13558f0e7c6d1a98684214460bcd4b9005500015b5048fb1b0d2856786b8764dbc713e6b078a5b1a56e17866400e1d862183c7a0a513ae8351de11f6f6749d2
   languageName: node
   linkType: hard
 
@@ -7550,7 +7550,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react@npm:*, react@npm:16.13.1":
+"react@npm:*":
   version: 16.13.1
   resolution: "react@npm:16.13.1"
   dependencies:
@@ -7558,6 +7558,17 @@ fsevents@^1.2.7:
     object-assign: ^4.1.1
     prop-types: ^15.6.2
   checksum: 13dcc9ba8a7521ecc3d7e69998dbc5703ae9515308d06a94a474ad34b42f1fc109372265e924a8c9b11d20fa1828407c290b8f61617c36734c4ca907ae7e5f45
+  languageName: node
+  linkType: hard
+
+"react@npm:16.14.0":
+  version: 16.14.0
+  resolution: "react@npm:16.14.0"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+    prop-types: ^15.6.2
+  checksum: 2769580b22952a52de3b5b2ea0f09cb904030b762d759739f49ab4da0b1f550e5c087ce3728c4be90f423d09481e0c075483c0c30b1ea9c549445c8b12020fd3
   languageName: node
   linkType: hard
 
