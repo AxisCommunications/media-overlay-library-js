@@ -1,3 +1,5 @@
+# This project has moved to become part of [media-stream-library-js](https://github.com/AxisCommunications/media-stream-library-js/tree/main/overlay)
+
 # Media Overlay Library JS
 
 [![CI][ci-image]][ci-url]
